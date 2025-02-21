@@ -1,0 +1,49 @@
+body {
+  font-family: "Roboto", sans-serif;
+  background: #f8f5f2;
+  color: #3a2e26;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+      rgba(248, 245, 242, 0.9),
+      rgba(248, 245, 242, 0.9)
+    ),
+    url("background.jpg");
+  background-size: cover;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.menu .item-card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+}
+
+.add-to-cart {
+  background: #a56c4a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+}
