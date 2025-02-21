@@ -1,13 +1,10 @@
-// app.js
 document.addEventListener("DOMContentLoaded", () => {
-  // Инициализация AOS
   AOS.init({
     duration: 1000,
     once: true,
     offset: 120,
   });
 
-  // Мобильное меню
   const hamburger = document.querySelector(".hamburger");
   const navMenu = document.querySelector(".nav-menu");
 
@@ -16,7 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     navMenu.classList.toggle("active");
   });
 
-  // Фильтрация меню
   document.querySelectorAll(".filter").forEach((button) => {
     button.addEventListener("click", () => {
       document.querySelector(".filter.active").classList.remove("active");
@@ -32,13 +28,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Корзина
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   const updateCartCount = () => {
     document.querySelector(".cart-count").textContent = cart.length;
   };
 
-  // Инициализация Swiper
   new Swiper(".reviews-slider", {
     loop: true,
     slidesPerView: 1,
@@ -54,7 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  // Прелоадер
   window.addEventListener("load", () => {
     document.querySelector(".preloader").style.display = "none";
   });
